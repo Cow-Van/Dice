@@ -58,12 +58,12 @@ class Die {
     this.x = x;
     this.y = y;
     
-    nums.put(1, one);
-    nums.put(2, two);
-    nums.put(3, three);
-    nums.put(4, four);
-    nums.put(5, five);
-    nums.put(6, six);
+  //  nums.put(1, one);
+  //  nums.put(2, two);
+  //  nums.put(3, three);
+  //  nums.put(4, four);
+  //  nums.put(5, five);
+  //  nums.put(6, six);
   }
   
   public void roll() {
