@@ -38,15 +38,15 @@ void mousePressed() {
 class Die {
   public static final int length = 90;
   
-  private final int[][] one = new int[][]{{length / 2, length / 2}};
-  private final int[][] two = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}};
-  private final int[][] three = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 2, length / 2}};
-  private final int[][] four = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 4, length / 4}, {3 * length / 4, 3 * length / 4}};
-  private final int[][] five = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 4, length / 4}, {3 * length / 4, 3 * length / 4}, {length / 2, length / 2}};
-  private final int[][] six = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 4, length / 4}, {3 * length / 4, 3 * length / 4}, {length / 4, length / 2}, {3 * length / 4, length / 2}};
-  private final int dotSize = length / 5;
+  //private final int[][] one = new int[][]{{length / 2, length / 2}};
+  //private final int[][] two = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}};
+  //private final int[][] three = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 2, length / 2}};
+  //private final int[][] four = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 4, length / 4}, {3 * length / 4, 3 * length / 4}};
+  //private final int[][] five = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 4, length / 4}, {3 * length / 4, 3 * length / 4}, {length / 2, length / 2}};
+  //private final int[][] six = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 4, length / 4}, {3 * length / 4, 3 * length / 4}, {length / 4, length / 2}, {3 * length / 4, length / 2}};
+  //private final int dotSize = length / 5;
   
-  private final Map<Integer, int[][]> nums = new HashMap();
+  //private final Map<Integer, int[][]> nums = new HashMap();
   
   
   private final int x;
@@ -75,9 +75,9 @@ class Die {
     rect(x, y, length, length);
     
     fill(0);
-    for (int i = 0; i < nums.get(num).length; i++) {
-      ellipse(x + nums.get(num)[i][0], y + nums.get(num)[i][1], dotSize, dotSize);
-    }
+    //for (int i = 0; i < nums.get(num).length; i++) {
+    //  ellipse(x + nums.get(num)[i][0], y + nums.get(num)[i][1], dotSize, dotSize);
+    //}
   }
   
   public int getNum() {
