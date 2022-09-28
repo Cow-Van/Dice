@@ -37,15 +37,15 @@ void mousePressed() {
 }
 
 class Die { 
-  //private final int[][] one = new int[][]{{length / 2, length / 2}};
-  //private final int[][] two = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}};
-  //private final int[][] three = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 2, length / 2}};
-  //private final int[][] four = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 4, length / 4}, {3 * length / 4, 3 * length / 4}};
-  //private final int[][] five = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 4, length / 4}, {3 * length / 4, 3 * length / 4}, {length / 2, length / 2}};
-  //private final int[][] six = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 4, length / 4}, {3 * length / 4, 3 * length / 4}, {length / 4, length / 2}, {3 * length / 4, length / 2}};
-  //private final int dotSize = length / 5;
+  private final int[][] one = new int[][]{{length / 2, length / 2}};
+  private final int[][] two = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}};
+  private final int[][] three = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 2, length / 2}};
+  private final int[][] four = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 4, length / 4}, {3 * length / 4, 3 * length / 4}};
+  private final int[][] five = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 4, length / 4}, {3 * length / 4, 3 * length / 4}, {length / 2, length / 2}};
+  private final int[][] six = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 4, length / 4}, {3 * length / 4, 3 * length / 4}, {length / 4, length / 2}, {3 * length / 4, length / 2}};
+  private final int dotSize = length / 5;
   
-  //private final Map<Integer, int[][]> nums = new HashMap();
+  private final Map<Integer, int[][]> nums = new HashMap();
   
   
   private final int x;
@@ -57,12 +57,12 @@ class Die {
     this.x = x;
     this.y = y;
     
-  //  nums.put(1, one);
-  //  nums.put(2, two);
-  //  nums.put(3, three);
-  //  nums.put(4, four);
-  //  nums.put(5, five);
-  //  nums.put(6, six);
+    nums.put(1, one);
+    nums.put(2, two);
+    nums.put(3, three);
+    nums.put(4, four);
+    nums.put(5, five);
+    nums.put(6, six);
   }
   
   public void roll() {
@@ -74,9 +74,9 @@ class Die {
     rect(x, y, length, length);
     
     fill(0);
-    //for (int i = 0; i < nums.get(num).length; i++) {
-    //  ellipse(x + nums.get(num)[i][0], y + nums.get(num)[i][1], dotSize, dotSize);
-    //}
+    for (int i = 0; i < nums.get(num).length; i++) {
+      ellipse(x + nums.get(num)[i][0], y + nums.get(num)[i][1], dotSize, dotSize);
+    }
   }
   
   public int getNum() {
