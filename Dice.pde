@@ -2,12 +2,13 @@ import java.util.Map;
 import java.util.List;
 
 final List<Die> dice = new ArrayList();
+final int length = 90;
 
 void setup() {
   noLoop();
   size(500, 500);
-  for (int j = (height / 3 - Die.length) / 2 + 90; j < height; j += height / 4) {
-    for (int i = (width / 3 - Die.length) / 2; i < width; i += width / 3) {
+  for (int j = (height / 3 - length) / 2 + 90; j < height; j += height / 4) {
+    for (int i = (width / 3 - length) / 2; i < width; i += width / 3) {
       Die die = new Die(i, j);
       die.roll();
       dice.add(die);
@@ -35,9 +36,7 @@ void mousePressed() {
   }
 }
 
-class Die {
-  public static final int length = 90;
-  
+class Die { 
   //private final int[][] one = new int[][]{{length / 2, length / 2}};
   //private final int[][] two = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}};
   //private final int[][] three = new int[][]{{length / 4, 3 * length / 4}, {3 * length / 4, length / 4}, {length / 2, length / 2}};
