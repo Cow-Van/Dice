@@ -25,7 +25,8 @@ void draw() {
     sum += dice.get(i).getNum();
   }
   
-  text(sum, width / 2, 50);
+  textSize(20);
+  text("Total: " + sum, width / 2 - 45, 50);
 }
 
 void mousePressed() {
